@@ -22,6 +22,37 @@
         var third = (d*h) - (e*g);
         var ans = a*first - b*second + c*third;
         document.getElementById('result').value = ans;
+        square();
+    }
+    function square(){
+        var a = document.getElementById('a').value;
+        var b = document.getElementById('b').value;
+        var c = document.getElementById('c').value;
+        var d = document.getElementById('d').value;
+        var e = document.getElementById('e').value;
+        var f = document.getElementById('f').value;
+        var g = document.getElementById('g').value;
+        var h = document.getElementById('h').value;
+        var i = document.getElementById('i').value;
+        var a_r = (a*a)+(b*d)+(c*g); 
+        var b_r = (a*b)+(b*e)+(c*h);
+        var c_r = (a*c)+(b*f)+(c*i);
+        var d_r = (d*a)+(e*d)+(f*g);
+        var e_r = (d*b)+(e*e)+(f*h);
+        var f_r = (d*c)+(e*f)+(f*i);
+        var g_r = (g*a)+(h*d)+(i*g);
+        var h_r = (g*b)+(h*e)+(i*h);
+        var i_r = (g*c)+(h*f)+(i*i);
+        document.getElementById('r_a').value = a_r;
+        document.getElementById('r_b').value = b_r;
+        document.getElementById('r_c').value = c_r;
+        document.getElementById('r_d').value = d_r;
+        document.getElementById('r_e').value = e_r;
+        document.getElementById('r_f').value = f_r;
+        document.getElementById('r_g').value = g_r;
+        document.getElementById('r_h').value = h_r;
+        document.getElementById('r_i').value = i_r;
+
     }
 </script>
 <style>
@@ -30,8 +61,8 @@ td{
     height: 2.2rem;
 }
 input{
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     border: none;
 
 }
@@ -41,26 +72,46 @@ table{
     border-top: none;
     border-bottom: none;
 }
+
 </style>
 <body><br><br><br><br><br><br><br><center>
     <table border="1">
         <tr>
             <td><input type="number" id="a"></td>
-            <td><input type="number"  id="b" ></td>
-            <td><input type="number"  id="c" ></td>
+            <td><input type="number"  id="b"></td>
+            <td><input type="number"  id="c"></td>
         </tr>
         <tr>
-            <td><input type="number"  id="d" ></td>
-            <td><input type="number"  id="e" ></td>
-            <td><input type="number"  id="f" ></td>
+            <td><input type="number"  id="d"></td>
+            <td><input type="number"  id="e"></td>
+            <td><input type="number"  id="f"></td>
             <td style="border: none;"></td>
             <td style="border: none;"><button onclick="solve()">=</button></td>
-            <td><input type="text" id="result" readonly="true"></td>
+            <td><input type="text" id="result" readonly ></td>
         </tr>
         <tr>
-            <td><input type="number"  id="g" ></td>
-            <td><input type="number"  id="h" ></td>
-            <td><input type="number"  id="i" ></td>
+            <td><input type="number"  id="g"></td>
+            <td><input type="number"  id="h"></td>
+            <td><input type="number"  id="i"></td>
+        </tr>
+        
+    </table>
+    <br><br>
+    <table border="1">
+        <tr><td style="border: none;"></td>
+            <td><input type="number" id="r_a" readonly></td>
+            <td><input type="number"  id="r_b" readonly></td>
+            <td><input type="number"  id="r_c" readonly></td>
+        </tr>
+        <tr><td style="border: none;">A<sup>2</sup> = </td>
+            <td><input type="number"  id="r_d" readonly ></td>
+            <td><input type="number"  id="r_e" readonly></td>
+            <td><input type="number"  id="r_f" readonly></td>
+        </tr>
+        <tr><td style="border: none;"></td>
+            <td><input type="number"  id="r_g" readonly></td>
+            <td><input type="number"  id="r_h" readonly></td>
+            <td><input type="number"  id="r_i" readonly></td>
         </tr>
         
     </table>
